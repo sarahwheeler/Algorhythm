@@ -413,6 +413,7 @@
 				262C01B61B8A9C6C0071F478 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		262C01B71B8A9C6C0071F478 /* Build configuration list for PBXNativeTarget "AlgorhythmTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +422,7 @@
 				262C01B91B8A9C6C0071F478 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
