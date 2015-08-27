@@ -12,9 +12,13 @@ class PlaylistMasterViewController: UIViewController {
 
     @IBOutlet weak var aButton: UIButton!
     
+    @IBOutlet weak var playlistImageView0: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         aButton.setTitle("Press me!", forState: .Normal)
+        let playlist = Playlist(index: 0)
+        playlistImageView0.image = playlist.icon
     }
 
     override func didReceiveMemoryWarning() {
