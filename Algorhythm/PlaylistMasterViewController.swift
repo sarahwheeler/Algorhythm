@@ -29,9 +29,8 @@ class PlaylistMasterViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showPlaylistDetail" {
             // destinationViewController accesses the VC we're transitioning to through the segue; this returns a VC that has a type of AnyObject
-            //
             let playlistDetailController = segue.destinationViewController as! PlaylistDetailViewController
-            playlistDetailController.segueLabelText = "Yay! You pressed the button!"
+            playlistDetailController.playlist = Playlist(index: 0)
         }
     }
 
