@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jyT-OO-eKN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Playlists-->
@@ -34,6 +35,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" red="0.1764705882352941" green="0.18431372549019609" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.097864337513347555" green="0.10577587994826876" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="XA9-Mg-5e1" secondAttribute="bottom" constant="146" id="NGv-kt-PFZ"/>
@@ -64,23 +66,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You haven't pressed the button." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUT-lt-YrP">
-                                <rect key="frame" x="46" y="273" width="244" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="wal-1A-sLI">
+                                <rect key="frame" x="0.0" y="64" width="320" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wal-1A-sLI" secondAttribute="height" multiplier="32:29" id="e0Q-xc-7KF"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="maq-pz-FZX">
+                                <rect key="frame" x="0.0" y="234" width="320" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Goes Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqb-jy-3JK">
+                                        <rect key="frame" x="20" y="10" width="114" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydd-fk-v9I">
+                                        <rect key="frame" x="20" y="39" width="280" height="43"/>
+                                        <string key="text">This is a collection of my favorite songs to listen to when working out. It's got everything from fast cardio to power workout tunes. All the right fuel to get your engine going.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.011764705882352941" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ydd-fk-v9I" secondAttribute="trailing" constant="20" id="APj-tQ-akJ"/>
+                                    <constraint firstItem="cqb-jy-3JK" firstAttribute="leading" secondItem="maq-pz-FZX" secondAttribute="leading" constant="20" id="GAT-D0-E38"/>
+                                    <constraint firstItem="Ydd-fk-v9I" firstAttribute="top" secondItem="cqb-jy-3JK" secondAttribute="bottom" constant="8" id="N0t-Pq-ZZJ"/>
+                                    <constraint firstItem="cqb-jy-3JK" firstAttribute="top" secondItem="maq-pz-FZX" secondAttribute="top" constant="10" id="ZLa-a6-BQ9"/>
+                                    <constraint firstAttribute="width" secondItem="maq-pz-FZX" secondAttribute="height" multiplier="8:3" id="bQb-nj-N7l"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ydd-fk-v9I" secondAttribute="trailing" constant="20" id="kMP-uK-xgR"/>
+                                    <constraint firstItem="Ydd-fk-v9I" firstAttribute="leading" secondItem="maq-pz-FZX" secondAttribute="leading" constant="20" id="zek-A1-Zal"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.67345104419795621" green="1" blue="0.86360403865587332" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="zUT-lt-YrP" secondAttribute="centerX" id="cXL-QK-AWp"/>
-                            <constraint firstAttribute="centerY" secondItem="zUT-lt-YrP" secondAttribute="centerY" id="umf-k2-xxq"/>
+                            <constraint firstItem="wal-1A-sLI" firstAttribute="leading" secondItem="h2G-iw-2Ql" secondAttribute="leading" id="C4Q-Da-04h"/>
+                            <constraint firstAttribute="trailing" secondItem="wal-1A-sLI" secondAttribute="trailing" id="KXn-Lw-ezM"/>
+                            <constraint firstItem="maq-pz-FZX" firstAttribute="bottom" secondItem="wal-1A-sLI" secondAttribute="bottom" id="QhF-jf-e0T"/>
+                            <constraint firstItem="wal-1A-sLI" firstAttribute="top" secondItem="Ssi-mw-ddn" secondAttribute="bottom" id="RoJ-ZO-eSc"/>
+                            <constraint firstAttribute="trailing" secondItem="maq-pz-FZX" secondAttribute="trailing" id="S0d-S5-hmm"/>
+                            <constraint firstItem="maq-pz-FZX" firstAttribute="leading" secondItem="h2G-iw-2Ql" secondAttribute="leading" id="wmd-k0-qQd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Artists" id="lnq-2v-HQd"/>
-                    <connections>
-                        <outlet property="buttonPressLabel" destination="zUT-lt-YrP" id="IMH-D0-OEG"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Er-oS-vFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,9 +122,11 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jyT-OO-eKN" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ked-O9-qai">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="ked-O9-qai">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

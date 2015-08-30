@@ -10,8 +10,6 @@ import UIKit
 
 class PlaylistDetailViewController: UIViewController {
 
-    
-    @IBOutlet weak var buttonPressLabel: UILabel!
     var playlist: Playlist?
     
     override func viewDidLoad() {
