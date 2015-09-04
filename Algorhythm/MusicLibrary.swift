@@ -8,11 +8,9 @@
 
 import Foundation
 
-// Use Struct for data model
-
 struct MusicLibrary {
+    
     let library = [
-        // six dictionaries
         [
             "title": "Rise and Shine",
             "description": "Get your morning going by singing along to these classic tracks as you hit the shower bright and early!",
