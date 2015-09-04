@@ -22,10 +22,11 @@ class PlaylistMasterViewController: UIViewController {
         for index in 0..<playlistsArray.count {
             let playlist = Playlist(index: index)
             let playlistImageView = playlistsArray[index]
+            playlistImageView.image = playlist.icon
+            playlistImageView.backgroundColor = playlist.backgroundColor
         }
         
-        playlistImageView.image = playlist.icon
-        playlistImageView.backgroundColor = playlist.backgroundColor
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,9 +36,13 @@ class PlaylistMasterViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showPlaylistDetailSegue" {
-            // destinationViewController accesses the VC we're transitioning to through the segue; this returns a VC that has a type of AnyObject
-            let playlistDetailController = segue.destinationViewController as! PlaylistDetailViewController
-            playlistDetailController.playlist = Playlist(index: 0)
+            let playlistImageView = sender!.view as! UIImageView
+            
+            if let index = find(playlistsArray, playlistImageView) {
+                // destinationViewController accesses the VC we're transitioning to through the segue; this returns a VC that has a type of AnyObject
+                let playlistDetailController = segue.destinationViewController as! PlaylistDetailViewController
+                playlistDetailController.playlist = Playlist(index: index)
+            }
         }
     }
 

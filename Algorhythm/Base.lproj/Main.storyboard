@@ -79,7 +79,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydd-fk-v9I">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydd-fk-v9I">
                                         <rect key="frame" x="20" y="39" width="280" height="43"/>
                                         <string key="text">This is a collection of my favorite songs to listen to when working out. It's got everything from fast cardio to power workout tunes. All the right fuel to get your engine going.</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
@@ -89,8 +89,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.011764705882352941" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ydd-fk-v9I" secondAttribute="trailing" constant="20" id="2n5-25-rY1"/>
+                                    <constraint firstItem="Ydd-fk-v9I" firstAttribute="leading" secondItem="maq-pz-FZX" secondAttribute="leading" constant="20" id="7wn-IE-GCz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ydd-fk-v9I" secondAttribute="trailing" constant="20" id="GHE-d7-I3P"/>
+                                    <constraint firstItem="Ydd-fk-v9I" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="maq-pz-FZX" secondAttribute="leading" constant="20" id="WXr-gE-lyX"/>
                                     <constraint firstItem="Ydd-fk-v9I" firstAttribute="top" secondItem="cqb-jy-3JK" secondAttribute="bottom" constant="8" symbolic="YES" id="YfD-0X-PhR"/>
+                                    <constraint firstItem="Ydd-fk-v9I" firstAttribute="top" secondItem="cqb-jy-3JK" secondAttribute="bottom" constant="8" id="YyS-C8-aqd"/>
                                     <constraint firstItem="Ydd-fk-v9I" firstAttribute="leading" secondItem="cqb-jy-3JK" secondAttribute="leading" id="hqC-9J-9DJ"/>
+                                    <constraint firstItem="Ydd-fk-v9I" firstAttribute="top" secondItem="cqb-jy-3JK" secondAttribute="bottom" constant="8" id="laV-GH-tK5"/>
                                     <constraint firstItem="cqb-jy-3JK" firstAttribute="leading" secondItem="maq-pz-FZX" secondAttribute="leading" constant="20" id="pcV-1e-9pt"/>
                                     <constraint firstItem="cqb-jy-3JK" firstAttribute="top" secondItem="maq-pz-FZX" secondAttribute="top" constant="10" id="plq-GP-bXw"/>
                                 </constraints>
